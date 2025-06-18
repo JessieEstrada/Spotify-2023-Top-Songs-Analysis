@@ -7,11 +7,6 @@ This project focuses on cleaning and analyzing Spotify's most streamed songs of 
 ## 📁 Dataset Cleaning & Data Modeling
 
 ### 1. Missing Values (Replaced with Mean) — `in_shazam_charts` Column
-**Pre-Cleaning Screenshot:**  
-![Pre-Cleaning Screenshot - Shazam Charts Column](./screenshots/shazam_pre_cleaning.png)
-
-**Post-Cleaning Screenshot:**  
-![Post-Cleaning Screenshot - Shazam Charts Column](./screenshots/shazam_post_cleaning.png)
 
 **Explanation:**  
 The `in_shazam_charts` column contained missing values that could distort insights, as Shazam plays a critical role in music discovery. I calculated the column's mean and used it to replace the missing values. This ensures the data remains consistent while preserving the analytical integrity of how frequently songs are discovered on Shazam.
@@ -19,11 +14,6 @@ The `in_shazam_charts` column contained missing values that could distort insigh
 ---
 
 ### 2. Data Outliers (Replaced with Mean) — `streams` Column  
-**Pre-Cleaning Screenshot:**  
-![Pre-Cleaning Screenshot - Streams Column](./screenshots/streams_pre_cleaning.png)
-
-**Post-Cleaning Screenshot:**  
-![Post-Cleaning Screenshot - Streams Column](./screenshots/streams_post_cleaning.png)
 
 **Explanation:**  
 The `streams` column is central to identifying popular tracks. I identified extreme outliers that skewed the distribution. To normalize the data, I replaced these outlier values with the column mean. This allowed for fairer comparisons of artist and song popularity.
@@ -31,11 +21,6 @@ The `streams` column is central to identifying popular tracks. I identified extr
 ---
 
 ### 3. Data Typos (Corrected Special Characters) — `artist(s)_name` Column  
-**Pre-Cleaning Screenshot:**  
-![Pre-Cleaning Screenshot - Artist Name Typos](./screenshots/artist_typos_pre.png)
-
-**Post-Cleaning Screenshot:**  
-![Post-Cleaning Screenshot - Artist Name Typos](./screenshots/artist_typos_post.png)
 
 **Explanation:**  
 The `artist(s)_name` column included incorrect characters (e.g., missing tildes or accents) due to formatting issues when importing to Power BI. I manually corrected these entries to ensure accurate artist grouping and cleaner visualizations.
